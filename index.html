@@ -1,76 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>CSV to HTML Table</title>
-    <meta name="author" content="Derek Eder">
-    <meta content="Display any CSV file as a searchable, filterable, pretty HTML table" />
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<head>
+  <title>Data Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+ 
+ 
+ 
+  </style>
   </head>
+  <body>
+  
+  <h7><b>Cats Ass Analytics</b> (Catalytics &#8482;)</h7>
 
+<body>
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#"></a>
+  <img src="catass.png" alt="Logo" style="width:40px;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="rawdata.html">Raw Data</a>
+      </li>
+      
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Plots
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="home2.html">Max T </a>
+          <a class="dropdown-item" href="home3.html">Humidity</a>
+          <a class="dropdown-item" href="home4.html">Cloud Index</a>
+          <a class="dropdown-item" href="home5.html">Wind Speed</a>
+          <a class="dropdown-item" href="home6.html">Comparison</a>
+          <a class="dropdown-item" href="home6.html">Statistics</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+ <div class="row bg-secondary text-light">
+         
+ 
+
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
   <body>
     <div class="container-fluid">
 
-      <h2>CSV to HTML Table</h2>
+      <div class="row">
+      <div class="col-md-3">
+        <h2><b>Project Summary</b></h2>
+      </div>
+      <div class="col-md-5">
+          <br>
+          <br>
+          <br>
+          <h2 class="text-center"><b></b></h2>
+       <h2>Example Plot: Max Temperature vs Latitude </h2>
+         
+      </div>
+      <div class="col-md-4" style="text-align: center;">
 
-           
-      <div id='table-container'></div>
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center"><b></b></h2>
+            </div>
+            <div class= "col-md-12"> <h2>Visualizations</h2></div>
+            
 
-    </div><!-- /.container -->
+        </div>
 
-    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+        </div>
+      </div>
+
+      <div class="row">
 
 
-    <script type="text/javascript">
-      function format_link(link){
-        if (link)
-          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-        else
-          return "";
-      }
+      <div class="col-md-3 boxes-left" style="padding-top: 0px;">
+        <div class="box1">
+            
+            <p>This project examines and explores weather data for more than 500 cities as a function of their 
+                latitude location. The analysis includes analysis of wind speed, Maximum Temperature, Cloud Index
+                and Humidity. These data are then analyzed and plotted as a function of latitude. The data was
+                drawn from <i>Open Weather Map's</i> website <a href="https://openweathermap.org/"> Open Weather Map</a> 
+                using Python API calls to that site, then stored in CSV files and integrated into Panda Dataframes and plotted 
+                with Matplotlib
+                <br>                             
+            </p>
+            <p>Besides the Matplotlib charting, statistical analysis was also conducted on the weather parameters versus
+                the city latitude. At this time the analysis is limited to linear regression with correlation coefficents
+                computed and best fit lines plotted. However we could have applied non-linear models as well or attemted
+                to correlate weather parameters to see if there was a relationship. For the purpose of this study, the aim in 
+                this project is limited to providing simple statistical analysis and plots as a foundation for improving 
+                the data visualization skills and bringing them to life for in a website platform so that data is available
+                to those on the internet.
 
-      CsvToHtmlTable.init({
-        csv_path: 'data/cities.csv',
-        element: 'table-container', 
-        allow_download: true,
-        csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": false},
-        custom_formatting: [[4, format_link]]
-      });
-    </script>
+            </p>
+        </div>
 
-<div id='table-container'></div>
-.
- 
-<script>
-  CsvToHtmlTable.init({
-    csv_path: 'data/countries.csv',
-    element: 'table-container', 
-    allow_download: true,
-    csv_options: {separator: ';', delimiter: '"'},
-    datatables_options: {"paging": false}
-  });
-</script>
+        <div class="box2"></div>
+       
+      </div>
+      
+
+      
+
+      <div class="col-md-5 box-centre">
+        <img src="Fig1.png" class="img-thumbnail" alt="Temp v Alt" width="700" height="900"> 
+        
+         
+      </div>
+
+      <div class="col-md-4 boxes-right">
+        <div class="col-md-title">
+            <p>Here are examples of the data visualization included in website that can be viewed
+                as separate pages in this website with a brief description of the chart and the 
+                data analysis.
+            </p>
+        </div>
+        <div class="col-md-6 box-r">
+            <img src="Fig1.png" class="img-thumbnail" alt="Temp v Alt" width="195" height="250">    
+        </div>
+        
+        <div class="col-md-6 box-r">
+            <img src="Fig2.png" class="img-thumbnail" alt="Temp v Alt" width="195" height="236">
+        </div>
+       
+        <div class="col-md-6 box-r">
+            <img src="Fig3.png" class="img-thumbnail" alt="Temp v Alt" width="195" height="236">
+
+        </div>
+        
+        <div class="col-md-6 box-r">
+            <img src="Fig4.png" class="img-thumbnail" alt="Temp v Alt" width="195" height="236">
+        </div>
+       
+      </div>
+      </div>
+    </div>
+</div> 
   </body>
 </html>
+
